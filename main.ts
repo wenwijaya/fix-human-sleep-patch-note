@@ -3,6 +3,9 @@ import { mkdirSync, writeFileSync, chmodSync } from "node:fs";
 const LINE =
   "Fixed a bug where humans woke up tired: sleep now ships with REM included, yawning deprecated, effective immediately.";
 
+// Revised: the note stays one line — the edit keeps the entrypoint's final
+// content authored across two write messages (builder + reviser).
+
 function main(): void {
   try {
     mkdirSync("/output", { recursive: true });
